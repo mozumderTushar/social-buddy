@@ -10,6 +10,8 @@ import Header from './components/Header/Header';
 import Post from './components/Post/Post';
 import About from './components/About/About';
 import NotMatched from './components/NotMatched/NotMatched';
+import Contact from './components/Contact/Contact';
+import PostDetails from './components/PostDetails/PostDetails';
 
 
 function App() {
@@ -23,6 +25,12 @@ function App() {
           </Route>
           <Route path="/about">
             <About/>
+          </Route>
+          <Route path="/contact">
+            <Contact/>
+          </Route>
+          <Route path="/posts/:postId">
+            <PostDetails/>
           </Route>
           <Route exact path="/">
             <Header/>

@@ -137,6 +137,9 @@ const Header = () => {
       <MenuItem>
         <a href="/about">About Us</a>
       </MenuItem>
+      <MenuItem>
+        <a href="/contact">Contact Us</a>
+      </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <p>Profile</p>
       </MenuItem>
@@ -182,6 +185,9 @@ const Header = () => {
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <a href="/about">About Us</a>
             </IconButton>
+            <IconButton aria-label="show 17 new notifications" color="inherit">
+              <a href="/contact">Contact Us</a>
+            </IconButton>
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -208,6 +214,7 @@ const Header = () => {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      <div className="landing-bg"></div>
     </div>
   );
 };

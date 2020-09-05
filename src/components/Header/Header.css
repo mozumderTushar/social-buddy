@@ -5,3 +5,9 @@ a{
 .menu-items a{
     color: #000;
 }
+.landing-bg{
+    background-image: url(../../image/landing-bg.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    min-height:700px
+}
