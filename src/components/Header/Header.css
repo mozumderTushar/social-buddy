@@ -9,5 +9,8 @@ a{
     background-image: url(../../image/landing-bg.jpg);
     background-repeat:no-repeat;
     background-size: cover;
-    min-height:700px
+    min-height:700px;
+    position: relative;
+    
 }
+

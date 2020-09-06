@@ -13,6 +13,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import './Header.css'
 
+
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -79,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Header = () => {
-    const classes = useStyles();
+  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -131,18 +132,18 @@ const Header = () => {
       onClose={handleMobileMenuClose}
     >
       <div className="menu-items">
-      <MenuItem>
-        <a href="/post">Post</a>
-      </MenuItem>
-      <MenuItem>
-        <a href="/about">About Us</a>
-      </MenuItem>
-      <MenuItem>
-        <a href="/contact">Contact Us</a>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <p>Profile</p>
-      </MenuItem>
+        <MenuItem>
+          <a href="/post">Post</a>
+        </MenuItem>
+        <MenuItem>
+          <a href="/about">About Us</a>
+        </MenuItem>
+        <MenuItem>
+          <a href="/contact">Contact Us</a>
+        </MenuItem>
+        <MenuItem onClick={handleProfileMenuOpen}>
+          <p>Profile</p>
+        </MenuItem>
       </div>
     </Menu>
   );
@@ -162,7 +163,7 @@ const Header = () => {
           <Typography className={classes.title} variant="h6" noWrap>
             Social Buddy
           </Typography>
-          
+
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -176,11 +177,11 @@ const Header = () => {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
-    
+
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
-            <a href="/post">Post</a>
+              <a href="/post">Post</a>
             </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <a href="/about">About Us</a>
