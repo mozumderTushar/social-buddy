@@ -11,16 +11,12 @@ const Contact = () => {
             <Box display="flex" justifyContent="center" m={1} p={1}  >
                 <Box  >
                     <h3>WE ARE ALWAYS HAPPY TO HELP</h3>
-                   
                 </Box>
-
             </Box>
             <Box display="flex" justifyContent="center" m={1} p={1}  >
-                <Box  >
-                    
+                <Box>
                     <p>GET IN TOUCH WITH US TODAY!!!!</p>
                 </Box>
-
             </Box>
         </div>
 

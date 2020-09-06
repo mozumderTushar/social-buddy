@@ -21,22 +21,22 @@ function App() {
       <Router>
         <Switch>
           <Route path="/post">
-            <Post/>
+            <Post />
           </Route>
           <Route path="/about">
-            <About/>
+            <About />
           </Route>
           <Route path="/contact">
-            <Contact/>
+            <Contact />
           </Route>
           <Route path="/posts/:postId">
-            <PostDetails/>
+            <PostDetails />
           </Route>
           <Route exact path="/">
-            <Header/>
+            <Header />
           </Route>
           <Route path="*">
-            <NotMatched/>
+            <NotMatched />
           </Route>
         </Switch>
       </Router>

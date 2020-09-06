@@ -5,9 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
-import './PostDetails.css'
+
 
 const useStyles = makeStyles({
   root: {
@@ -15,33 +14,27 @@ const useStyles = makeStyles({
     backgroundColor: '#282c34',
     color: 'lightgray',
     margin: '2%',
-    padding:'50px',
-    borderRadius:'20px',
-    marginBottom:'40px',
+    padding: '50px',
+    borderRadius: '20px',
+    marginBottom: '40px',
     textAlign: 'center'
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
   },
   title: {
     fontSize: 14,
   },
-  pos: {
-    marginBottom: 12,
+  comment: {
+    borderRadius: '10px'
   },
-  
 });
 
 
 const PostDetails = () => {
 
   const classes = useStyles();
-  
+
 
   const { postId } = useParams()
-  const [postdetails, setPostDetails] = useState({});
+  const [postDetails, setPostDetails] = useState({});
   const [comment, setComment] = useState([])
 
 
@@ -67,13 +60,13 @@ const PostDetails = () => {
       <Card className={classes.root} variant="outlined">
         <CardContent>
           <Typography className={classes.title} gutterBottom>
-            USER ID: {postdetails.userId}
+            USER ID: {postDetails.userId}
           </Typography>
           <Typography variant="h5" component="h5">
-            {postdetails.title}
+            {postDetails.title}
           </Typography>
           <Typography variant="body2" component="p">
-            {postdetails.body}
+            {postDetails.body}
             <br />
             {'"a benevolent smile"'}
           </Typography>
@@ -82,21 +75,16 @@ const PostDetails = () => {
       </Card>
 
       <Box display="flex" justifyContent="center" m={1} p={1}  >
-        <Box p={1} >
-        <Button variant="contained"  color="primary" size="large">
-          Comments Section: {comment.length}
-</Button>
+        <Box p={2} bgcolor="primary.main" color="primary.contrastText" className={classes.comment} >
+
+          <Typography variant="h5" component="h5">
+            Comment Section: {comment.length}
+          </Typography>
         </Box>
-       
       </Box>
-
-
-        
- 
       {
         comment.map(comment => <Comments comment={comment} key={comment.id}></Comments>)
       }
-
     </div>
   );
 };

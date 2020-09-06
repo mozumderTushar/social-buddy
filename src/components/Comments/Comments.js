@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import Badge from '@material-ui/core/Badge';
-import './Comments.css'
+
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -54,8 +54,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: 'lightgray',
     margin: '2%',
-    padding:'20px',
-    borderRadius:'20px'
+    padding: '20px',
+    borderRadius: '20px'
   },
   media: {
     height: 0,
@@ -79,7 +79,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Comments = (props) => {
 
-
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -87,6 +86,7 @@ const Comments = (props) => {
     setExpanded(!expanded);
   };
 
+  //props read from comment js
   const { name, email, body } = props.comment
   const [image, setImage] = useState({})
 
@@ -105,7 +105,6 @@ const Comments = (props) => {
       <Card className={classes.root}>
         <CardHeader
           avatar={
-
             <StyledBadge
               overlap="circle"
               anchorOrigin={{
@@ -116,9 +115,7 @@ const Comments = (props) => {
             >
               {<SmallAvatar alt={name} src={image} />}
             </StyledBadge>
-
           }
-
           title={name}
           subheader={email}
         />
@@ -137,7 +134,6 @@ const Comments = (props) => {
           </IconButton>
         </CardActions>
       </Card>
-
     </div>
   );
 };

@@ -10,25 +10,25 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 400,
+    maxWidth: 350,
     display: "inline-block",
     height: 340,
     margin: "3%",
-
   },
 
 });
 
 const AllPosts = (props) => {
-  const { userId,id, title, body } = props.post
+  const { userId, id, title, body } = props.post
 
   const classes = useStyles();
   return (
 
+    //display all post
     <Card className={classes.root}>
       <CardActionArea>
         <CardContent>
-        <Typography gutterBottom variant="p" component="p">
+          <Typography gutterBottom variant="p" component="p">
             USER ID: {userId}
           </Typography>
           <Typography gutterBottom variant="h4" component="h2">
