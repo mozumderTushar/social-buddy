@@ -7,7 +7,6 @@ const Contact = () => {
         <div className="contact">
             <img src="https://cdn.pixabay.com/photo/2017/12/02/15/17/contact-us-2993109__340.jpg" alt="" />
 
-
             <Box display="flex" justifyContent="center" m={1} p={1}  >
                 <Box  >
                     <h3>WE ARE ALWAYS HAPPY TO HELP</h3>

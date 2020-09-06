@@ -17,7 +17,6 @@ import PostDetails from './components/PostDetails/PostDetails';
 function App() {
   return (
     <div >
-
       <Router>
         <Switch>
           <Route path="/post">

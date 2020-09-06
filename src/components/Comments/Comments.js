@@ -71,20 +71,11 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-  avatar: {
-    width: '80px',
-    height: '80px'
-  },
 }));
 
 const Comments = (props) => {
 
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   //props read from comment js
   const { name, email, body } = props.comment
@@ -100,41 +91,38 @@ const Comments = (props) => {
 
 
   return (
-    <div className="comment-container">
+    <Card className={classes.root}>
+      <CardHeader
+        avatar={
+          <StyledBadge
+            overlap="circle"
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            variant="dot"
+          >
+            {<SmallAvatar alt={name} src={image} />}
+          </StyledBadge>
+        }
+        title={name}
+        subheader={email}
+      />
 
-      <Card className={classes.root}>
-        <CardHeader
-          avatar={
-            <StyledBadge
-              overlap="circle"
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'right',
-              }}
-              variant="dot"
-            >
-              {<SmallAvatar alt={name} src={image} />}
-            </StyledBadge>
-          }
-          title={name}
-          subheader={email}
-        />
-
-        <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {body}
-          </Typography>
-        </CardContent>
-        <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-          <IconButton aria-label="share">
-            <ShareIcon />
-          </IconButton>
-        </CardActions>
-      </Card>
-    </div>
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {body}
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon />
+        </IconButton>
+        <IconButton aria-label="share">
+          <ShareIcon />
+        </IconButton>
+      </CardActions>
+    </Card>
   );
 };
 
